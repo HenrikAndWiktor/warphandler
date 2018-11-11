@@ -1,10 +1,10 @@
 language: java
 deploy:
-  skip_cleanup: true
-  provider: releases
-  api_key:
-    secure: Pq087EsY18/Gtdx8CaMaudoZbtgqPy+mCELlmwM/Uy1Su1UblQRLJudMKrTEAtQILeYisqZUEs+3XQbb6jYBIgNKXzNbOzIJFJoHeKgCfW+DBBlQJCOyg8+E3TPClxHQME2iqEYa0/+g5xuSt1L1BSlZ3JD/U7Q2A3wBbPKqmi8mjeJo54EnMLZDYnEUtmywT0qoj+JMs80LtkclvVdJ4XGFChU8YNbANrB9kdwbVIKx59cSDxzX5AH9W+kl/NQmhtWL63IkOc0ZrbvqxUDqP88pEoltgXngsAwa9NyOXMFat5VbWze7pFSmesEcjRYM14VCAL2uhhfw3qZcR/wioaVrCacZVH9O3eszBYF+/Tz0FhiJv0tAcskNU64EYyp84TCjRMiJJUvQZ1UJ2jX6mJLap4UcqBd+fv+u9KSwWfyfyqS/prw23y1G11nrnu0vboA1DrOtWp0fMqhKHtW+YmY7k/MY18navIaMCYiAPIErYYWa8VUZfyCi9RuezIS+NoJTW6juakfBO17DbRToUdHIOTT63YslTm5RiAnpBx7WUz+v1QnTPGPtN0LDWXymoBEjbOI+i/1ol30F5fkm4XZ7nQC5pkNRPlKbXtAZUpgAcZXpotXZ6i/StIU7bYOTDRr1aL+kUwC61u7wPv5JHla/+yfaN5C8yOdiQXp4boU=
-  file: warphandler-spigot/build/libs/warphandler-spigot-1.0-SNAPSHOT.jar
-  on:
-    repo: HenrikAndWiktor/warphandler
+  deploy:
+    provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+    keep-history: true
+    on:
+      branch: master
 sudo: enabled
