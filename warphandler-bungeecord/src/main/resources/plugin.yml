@@ -1,0 +1,3 @@
+name: WarpHandler
+version: @version@
+main: se.wiktoreriksson.server.warphandler.WarpHandlerBungeeCord

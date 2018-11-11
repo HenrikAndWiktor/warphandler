@@ -1,0 +1,13 @@
+name: WarpHandler
+version: 1.0-SNAPSHOT
+main: se.wiktoreriksson.server.warphandler.WarpHandlerSpigot
+commands:
+  warp:
+    usage: "/warp [<server> [player]]"
+    description: "warp"
+  createportal:
+    usage: "/createportal <world> <sendtoserver> <x> <y> <z> <sserverx> <sservery> <sserverz> <id>"
+    description: "Create Bungeewide portal. OP or perm warps.portal.create"
+  createportal:
+    usage: "/removeportal <id>"
+    description: "Remove Bungeewide portal. OP or perm warps.portal.remove"

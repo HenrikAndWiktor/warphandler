@@ -1,0 +1,3 @@
+rootProject.name = 'warphandler'
+
+include 'warphandler-common', 'warphandler-spigot', 'warphandler-bungeecord'
