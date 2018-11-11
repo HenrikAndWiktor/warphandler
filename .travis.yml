@@ -1,7 +1,7 @@
 language: java
 deploy:
   provider: releases
-  api_key: "501c9ba09bca7b94b46f064bcff651fad54b227c"
+  api_key: "ddd733093b28a65db4e1ce482571e13edaeb4e77"
   file: "warphandler-spigot/build/libs/warphandler-spigot-1.0-SNAPSHOT.jar"
   skip_cleanup: true
   on:
