@@ -1,9 +1,9 @@
 language: java
 deploy:
   provider: releases
-  api_key: "afa9b82ff6b83a58b071a7548dc9706ea3938dbb"
-  file: "warphandler-spigot/build/libs/warphandler-spigot-1.0-SNAPSHOT.jar"
-  skip_cleanup: true
+  api_key:
+    secure: XdF0TASaDCTnFf+HDulaWcdnhE6e/qV59rclhELghb/PLcrBf4RJdAXEsIm9PuHW2D4sFudXts+8fzHz2C8I1yfqkvz28WSrx2taE6842rS4501amtmpyPJJtJ2xWehLxV6F4uwITLYGJLhzxkwxw7qQHKr/ovutJ+8eW6NqD2twZe9Z5JisGJrJ+ZRGeYYQhjOXQi5225babtbZhaMm763a1M6SZqs898L0KIiQ3PxHzzRKISM5N85KcFSLSK21EzJIU0vKPFI3X8UoF0aqDhr/Io1YMOyCsT+tmeAmqN4r+3r0Fu93MEeuRzXiYym8M42MQkP0htEBiorY3/8UlTTWTPlEjC7cXDdGTkUFCIGHZh8yXFLBs8TzU467QXBghMhCGV1ksQrhBwkkigihYWM7/96JWViC6XVULQaOI43JTNDmaoV7/V9mOaj7Pr7wwjuxdtQXS1CHhIXIeUywEm1lWnXtcE3db5cUV62LZucaWuNOGU2fkaZLxkVClsCDpN+oqbS9disGr4y42214GUFGFJhiMZkPkqXIBMgO1qSek9IJbqkvLWY7r4iJJ3intqkRRD7CjuG0OPeriLVTZdB5/vQFVJVofygIkigLqqfA7r5juQ5ET9tm4VNRKEnbLT3WY2O/bEaYYVaurHuSpDEBHD2F7/KrcmiRUp37+TU=
+  file: warphandler-spigot/build/libs/warphandler-spigot-1.0-SNAPSHOT.jar
   on:
-    tags: false
+    repo: HenrikAndWiktor/warphandler
 sudo: enabled
