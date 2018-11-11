@@ -8,6 +8,6 @@ commands:
   createportal:
     usage: "/createportal <world> <sendtoserver> <x> <y> <z> <sserverx> <sservery> <sserverz> <id>"
     description: "Create Bungeewide portal. OP or perm warps.portal.create"
-  createportal:
+  removeportal:
     usage: "/removeportal <id>"
     description: "Remove Bungeewide portal. OP or perm warps.portal.remove"
