@@ -1,4 +1,14 @@
 language: java
-rvm:
-  - 1.8
+before_deploy:
+  # Set up git user name and tag this commit
+  - git config --local user.name "HenrikAndWiktor"
+  - git config --local user.email "wiktor.istok.eriksson@gmail.com"
+  - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+deploy:
+  provider: releases
+  api_key: "501c9ba09bca7b94b46f064bcff651fad54b227c"
+  file: "warphandler-spigot/build/libs/warphandler-spigot-1.0-SNAPSHOT.jar"
+  skip_cleanup: true
+  on:
+    tags: true
 sudo: enabled
