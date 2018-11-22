@@ -8,6 +8,20 @@ commands:
   createportal:
     usage: "/createportal <world> <sendtoserver> <x> <y> <z> <sserverx> <sservery> <sserverz> <id>"
     description: "Create Bungeewide portal. OP or perm warps.portal.create"
+    permission: warps.portal.create
+    permission-message: "You are not allowed to use /createportal [9]"
   removeportal:
     usage: "/removeportal <id>"
     description: "Remove Bungeewide portal. OP or perm warps.portal.remove"
+    permission: warps.portal.remove
+    permission-message: "You are not allowed to use /removeportal [1]"
+permissions:
+  warps.send.other:
+    description: "Warp anyone to other server, defaults to OP"
+    default: op
+  warps.portal.create:
+    description: "Create a portal, defaults to OP"
+    default: op
+  warps.portal.create:
+    description: "Remove a portal, defaults to OP"
+    default: op

@@ -161,15 +161,10 @@ public final class WarpHandlerSpigot extends JavaPlugin implements PluginMessage
                     break;
                 case 1:
                     if (!(sender instanceof Player))return false;
-                    if (!sender.isOp()) {
-                        if (!(sender.hasPermission("warps.send.me")||sender.hasPermission("warps.send.*")||sender.hasPermission("warps.*"))) return false;
-                    }
                     sendPlayer(args[0],(Player)sender);
                     break;
                 case 2:
-                    if (!sender.isOp()) {
-                        if (!(sender.hasPermission("warps.send.other")||sender.hasPermission("warps.send.*")||sender.hasPermission("warps.*"))) return false;
-                    }
+                    if (!sender.hasPermission("warps.send.other")) return false;
                     sendPlayer(args[0],Bukkit.getPlayerExact(args[1]));
                     break;
                 default:
@@ -177,9 +172,7 @@ public final class WarpHandlerSpigot extends JavaPlugin implements PluginMessage
             }
         } else if (label.equalsIgnoreCase("createportal")) {
             if (args.length!=5) return false;
-            if (!sender.isOp()) {
-                if (!(sender.hasPermission("warps.portal.create")||sender.hasPermission("warps.portal.*")||sender.hasPermission("warps.*"))) return false;
-            }
+
 
             String world = args[0];
             String server = args[1];
@@ -194,6 +187,7 @@ public final class WarpHandlerSpigot extends JavaPlugin implements PluginMessage
 
             if (!portals.get(id+".exist","false").equals("false")) {
                 sender.sendMessage(ChatColor.RED +"Sorry! Portal already exists! Choose another id or /removeportal");
+                return false;
             }
 
             portals.set(id+".server",sender);
@@ -207,9 +201,6 @@ public final class WarpHandlerSpigot extends JavaPlugin implements PluginMessage
             portals.set(id+".exist","true");
             sender.sendMessage(ChatColor.GREEN+"Portal "+id+" created");
         } else if (label.equalsIgnoreCase("removeportal")) {
-            if (!sender.isOp()) {
-                if (!(sender.hasPermission("warps.portal.remove")||sender.hasPermission("warps.portal.*")||sender.hasPermission("warps.*"))) return false;
-            }
             if (args.length!=1) return false;
             if (portals.get(args[0]+".exist","false").equals("false")) {
                 sender.sendMessage("Portal does not exist!");
@@ -217,7 +208,7 @@ public final class WarpHandlerSpigot extends JavaPlugin implements PluginMessage
             }
 
             portals.set(args[0]+".exist","false");
-            sender.sendMessage(ChatColor.RED +"Portal "+args[0]+" created");
+            sender.sendMessage(ChatColor.RED +"Portal "+args[0]+" removed");
         }
         return true;
     }
